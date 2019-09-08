@@ -1,0 +1,14 @@
+WebDriver driver;
+	public Login(WebDriver ldriver)
+	{
+		this.driver=ldriver;
+		
+	}
+	@FindBy(name="loginName") WebElement uname;
+	@FindBy(name="password") WebElement pwd;
+	@FindBy(xpath="//input[@value='Login']") WebElement logbtn;
+	public void loginToEmp(String username,String password)
+	{
+		uname.sendKeys(username);
+		pwd.sendKeys(password);
+		logbtn.click();

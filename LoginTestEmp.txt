@@ -1,0 +1,42 @@
+package testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import pages.AddEmp;
+import pages.LoginPage;
+import utility.BrowserFactory;
+
+
+public class LoginTestEmp
+{
+	WebDriver driver;
+	LoginPage login;
+	AddEmp emp;
+	BrowserFactory bFactory;
+	public  LoginTestEmp()
+	{
+		driver = BrowserFactory.startApplication(driver, "chrome", "http://localhost:9080/EmpDemo/login");
+		login = PageFactory.initElements(driver, LoginPage.class);
+		emp = PageFactory.initElements(driver, AddEmp.class);
+	    //login = new LoginPage(driver);
+	   // emp = new AddEmp(driver);
+		bFactory = new BrowserFactory();
+	    
+	  }
+	@BeforeMethod
+	public void log()
+	{
+		login.loginToEmp("admin", "admin");
+	}
+	@Test
+	public void addEmpoy()
+	{
+		emp.addEmpolyee("harsha", "bhavani", "uday", "bhaskar", "05/28/1995", "4600", "8186860886");
+		
+	}
+	
+
+}

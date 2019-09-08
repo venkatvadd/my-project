@@ -1,0 +1,42 @@
+varify title,url,header foter,isenable is displayed
+keep the header footer webelement in the communclass
+addnew employe,updateemploye,changepassword all these are extended login page not extended
+create the util classes 
+create database calls
+in a test class first testdata creation then driver instilisation,test execution/driverclose,testdata cleanup
+every test cases is indipendent in case if it is dependent make use of priority or dependendson
+cltr shift r 
+    
+
+
+
+
+
+<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.43.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-examples -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-examples</artifactId>
+		    <version>4.1.0</version>
+		</dependency>
+	</dependencies>
+	
+	<!--   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build> -->
+</project>
